@@ -330,3 +330,70 @@ Muestra correlaciones entre variables numéricas como el puntaje promedio, canti
 
 ![Image](https://github.com/user-attachments/assets/bcf8ba54-f330-471b-9198-516eacdb2a8f)
 
+## Recomendaciones por género
+La aplicación cuenta con un script personalizado para generar en consola una lista de los libros mejor valorados de un género específico, ordenados por su puntaje promedio.
+
+## Ubicación del script
+```bash
+libros/management/commands/libros_por_genero.py
+```
+## ¿Cómo se ejecuta?
+Desde la terminal:
+```bash
+python manage.py libros_por_genero <ID_DEL_GENERO>
+```
+Ejemplo:
+```bash
+python manage.py libros_por_genero 3
+```
+Esto mostrará en la consola los 10 libros con mejor promedio de calificación pertenecientes al género con ID 3.
+
+![Image](https://github.com/user-attachments/assets/56cb443d-6c37-422a-b5b9-9aedf54a9d4f)
+
+## ¿Qué hace el script?
+- Recibe un genero_id como argumento (por ejemplo: Romance, Ciencia ficción...).
+
+- Busca los libros que pertenecen a ese género.
+
+- Calcula el promedio de calificaciones que recibió cada libro.
+
+- Ordena los libros por su puntaje promedio (de mayor a menor).
+
+- Imprime los 10 primeros en consola con su respectivo promedio.
+
+
+## Licencia
+
+Este proyecto está licenciado bajo los términos de la [Licencia MIT](./LICENSE).
+
+## Licencia de Terceros
+```text
+Name                           Version      License
+ Django                         5.2.3        BSD License
+ PyJWT                          2.9.0        MIT License
+ asgiref                        3.8.1        BSD License
+ contourpy                      1.3.2        BSD License
+ cycler                         0.12.1       BSD License
+ djangorestframework            3.16.0       BSD License
+ djangorestframework_simplejwt  5.5.0        MIT License
+ fonttools                      4.58.4       MIT
+ kiwisolver                     1.4.8        BSD License
+ matplotlib                     3.10.3       Python Software Foundation License
+ numpy                          2.3.1        BSD License
+ packaging                      25.0         Apache Software License; BSD License
+ pandas                         2.3.0        BSD License
+ pillow                         11.3.0       UNKNOWN
+ psycopg2-binary                2.9.10       GNU Library or Lesser General Public License (LGPL)
+ pyparsing                      3.2.3        MIT License
+ python-dateutil                2.9.0.post0  Apache Software License; BSD License
+ pytz                           2025.2       MIT License
+ seaborn                        0.13.2       BSD License
+ six                            1.17.0       MIT License
+ sqlparse                       0.5.3        BSD License
+ tzdata                         2025.2       Apache Software License
+```
+
+
+
+
+
